@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
+import { NavigationExtras, Router, ActivatedRoute } from '@angular/router';
 import { Contact } from '../../models/contact.interface';
 
 @Component({
@@ -14,38 +14,34 @@ export class ContactsPageComponent implements OnInit {
       name: 'pepe',
       lastname: 'elguapo',
       email: 'pepe@gmail.com',
+      genre: 'hombre',
     },
     {
       id: 1,
       name: 'jose',
       lastname: 'maria',
       email: 'jose@gmail.com',
+      genre: 'hombre',
     },
     {
       id: 2,
       name: 'natalia',
       lastname: 'perez',
       email: 'natalia@gmail.com',
-    },
-    {
-      id: 4,
-      name: 'carlos',
-      lastname: 'garcia',
-      email: 'carlos@gmail.com',
-    },
-    {
-      id: 5,
-      name: 'lucas',
-      lastname: 'gimenez',
-      email: 'lucas@gmail.com',
+      genre: 'mujer',
     },
   ];
-  constructor(private router: Router) {}
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //asi obtenemos los query params
+    this.activatedRoute.queryParams.subscribe(({ genre }) =>
+      console.log(genre)
+    );
+  }
 
   /*
-   *ejemplo de paso de informacion entre componentes mediante a travez
+   *ejemplo de paso de informacion entre componentes a travez
    *del ESTADO
    */
   backToHome(contact: Contact) {

@@ -3,6 +3,6 @@
 <div *ngFor="let contact of contactList; let i = index">
   <div [routerLink]="['/contacts', contact.id]">
     <h5>{{ contact.name }}</h5>
-    <button (click)="backToHome(contact)">back to home</button>
+    <button (click)="backToHome(contact)">seleccionar amigo invisible</button>
   </div>
 </div>

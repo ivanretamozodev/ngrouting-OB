@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { Contact } from '../../models/contact.interface';
 
 @Component({
@@ -29,6 +29,11 @@ export class HomePageComponent implements OnInit {
   }
 
   navigateTo() {
-    this.router.navigate(['/contacts']);
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
+        genre: 'mujer',
+      },
+    };
+    this.router.navigate(['/contacts'], navigationExtras);
   }
 }

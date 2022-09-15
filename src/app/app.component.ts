@@ -16,6 +16,6 @@ export class AppComponent implements OnInit {
 
   logout() {
     sessionStorage.removeItem('token');
-    this.router.navigate(['login']);
+    this.router.navigate(['home']);
   }
 }
