@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Monsieur",
+        "first": "Stephen",
+        "last": "Dumont"
+      },
+      "location": {
+        "street": {
+          "number": 9236,
+          "name": "Avenue Vauban"
+        },
+        "city": "Bonstetten",
+        "state": "Valais",
+        "country": "Switzerland",
+        "postcode": 7552,
+        "coordinates": {
+          "latitude": "-58.6718",
+          "longitude": "-84.6595"
+        },
+        "timezone": {
+          "offset": "+11:00",
+          "description": "Magadan, Solomon Islands, New Caledonia"
+        }
+      },
+      "email": "stephen.dumont@example.com",
+      "login": {
+        "uuid": "e3fe21ed-fcf6-4754-8d92-f8dabd7e7366",
+        "username": "organicdog945",
+        "password": "siobhan",
+        "salt": "0W9yDuqa",
+        "md5": "8cf511e5a5f6eded9bd8e5e3fcaf2cfb",
+        "sha1": "20f6379f9fd4fa18ba9279331041e1b49ddac359",
+        "sha256": "501e877572c67750db376473a5680695fb7798ac1450a4f9c79b22a6daf967bf"
+      },
+      "dob": {
+        "date": "1976-05-27T08:32:39.391Z",
+        "age": 46
+      },
+      "registered": {
+        "date": "2019-10-27T05:41:08.354Z",
+        "age": 2
+      },
+      "phone": "079 494 24 41",
+      "cell": "079 437 44 33",
+      "id": {
+        "name": "AVS",
+        "value": "756.3527.6330.45"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/63.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/63.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/63.jpg"
+      },
+      "nat": "CH"
+    }
+  ],
+  "info": {
+    "seed": "5a11c3d942ae6de5",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
