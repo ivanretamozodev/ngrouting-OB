@@ -1,7 +1,6 @@
 <ng-container *ngIf="contact?.email; else noContact">
   <h1>Contactos: {{ id }}</h1>
-  <h5>Nombre: {{ contact?.name }}</h5>
-  <h5>apellido: {{ contact?.lastname }}</h5>
+  <h4>nombre: {{ contact! | nombreCompleto }}</h4>
   <h5>email: {{ contact?.email }}</h5>
   <h5>genero: {{ contact?.genre }}</h5>
 </ng-container>
