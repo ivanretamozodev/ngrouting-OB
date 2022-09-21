@@ -22,7 +22,6 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     /* si el can activate retorna true,podra activar la ruta de lo contrario no podra hacerlo*/
-    console.log('bloqueado por el canActivate');
 
     let token = sessionStorage.getItem('token');
     if (token) {

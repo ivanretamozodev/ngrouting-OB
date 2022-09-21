@@ -12,22 +12,36 @@ import { RandomUserService } from '../../services/random-user.service';
 })
 export class RandomContactsComponent implements OnInit {
   randomContact: RandomContact | null = null;
+  randomContactList: RandomContact[] | null = null;
+
   constructor(private randomUser: RandomUserService) {}
 
   ngOnInit(): void {
-    this.randomUser
-      .getRandomContact()
-      .subscribe((response: ContactResponse) => {
-        this.randomContact = response.results[0];
-      });
+    this.randomUser.getRandomContact().subscribe({
+      next: (response: ContactResponse) =>
+        (this.randomContact = response.results[0]),
+      error: (error) => console.error(`ha ocurrido este error: ${error}`),
+      complete: () => console.log('petición de contacto terminada'),
+    });
   }
 
-  obtainNewContact(): void {
-    this.randomUser.getRandomContact().subscribe(
-      (response: ContactResponse) => {
-        this.randomContact = response.results[0];
+  getNewContact() {
+    this.randomUser.getRandomContact().subscribe({
+      next: (response: ContactResponse) =>
+        (this.randomContact = response.results[0]),
+      error: (error) => console.error(`ha ocurrido este error: ${error}`),
+      complete: () => console.log('petición de contacto terminada'),
+    });
+  }
+
+  getListContacts(n: number) {
+    return this.randomUser.getRandomContacts(n).subscribe({
+      next: (response: RandomContact[]) => {
+        this.randomContactList = response;
+        console.log(this.randomContactList);
       },
-      (error) => console.log(`ha ocurrido un error ${error}`)
-    );
+      error: (error) => console.error(`ha ocurrido este error: ${error}`),
+      complete: () => console.log('petición de lista de contactos terminada'),
+    });
   }
 }

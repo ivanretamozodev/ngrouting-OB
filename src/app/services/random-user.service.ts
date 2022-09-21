@@ -33,5 +33,10 @@ export class RandomUserService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  getRandomContactsByGenre(genre: string) {}
+  getRandomContactsByGenre(genre: string) {
+    const params: HttpParams = new HttpParams().set('results', genre);
+    return this.http
+      .get(`https://randomuser.me/api/`, { params })
+      .pipe(retry(2), catchError(this.handleError));
+  }
 }
