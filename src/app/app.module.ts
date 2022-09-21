@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
+import { RandomUserComponent } from './components/random-user/random-user.component';
+import { RandomContactsComponent } from './pages/random-contacts/random-contacts.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { NombreCompletoPipe } from './pipes/nombre-completo.pipe';
     ContactDetailPageComponent,
     LoginFormComponent,
     NombreCompletoPipe,
+    RandomUserComponent,
+    RandomContactsComponent,
   ],
   imports: [
     AppRoutingModule,
